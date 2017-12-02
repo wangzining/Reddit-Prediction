@@ -1,0 +1,52 @@
+There are 132308 data entries.
+A sample data entry:
+{'image_id': '0',
+ 'localtime': '1333197639',
+ 'number_of_comments': '622',
+ 'number_of_downvotes': '30813',
+ 'number_of_upvotes': '32657',
+ 'rawtime': '2012-03-31T12:40:39.590113-07:00',
+ 'reddit_id': 'rmqjs',
+ 'score': '1844',
+ 'subreddit': 'funny',
+ 'title': "And here's a downvote.",
+ 'total_votes': '63470',
+ 'unixtime': '1333172439',
+ 'username': 'Animates_Everything'}
+
+
+A typical data entry has 13 features. However, there are some ill-posed data, and we will preprocess it.
+['20089', '']
+length is 2
+['2347', '1342612873', '2012-07-18T19:01:13-07:00', "My grandma just got a computer and she calls me for help every once in a while. Today my uncle sent her an email and she called me saying &quot;it says I need to click the chrome icon and I can't find it.&quot; I got to her house to see this email...", '8', 'wsmbs', '5', 'funny', '3', '1342638073', '2', '0', 'kendallbox4', '0.09', '1.932', '']
+length is 16
+['2347', '1342626475', '2012-07-18T22:47:55-07:00', 'For god sake grandma!', '161', 'wsyrn', '144', 'funny', '17', '1342651675', '127', '4', 'lat003', '0.128', '1.788', '']
+length is 16
+['2347', '1342832575', '2012-07-21T08:02:55-07:00', 'Not an animal but still cute', '14', 'wxb3b', '7', 'aww', '7', '1342857775', '0', '0', 'Ilga96', '0.0', '1.634', '']
+length is 16
+['2347', '1343957847', '2012-08-03T08:37:27-07:00', 'How I look explaining anything computer wise to my grandma.', '11567', 'xmgag', '6412', 'funny', '5155', '1343983047', '1257', '116', 'cjstop', '1.823', '1.384', '']
+length is 16
+['2347', '1345177721', '2012-08-17T11:28:41-07:00', 'This is why my family calls me these days.', '22', 'ye0o6', '14', 'funny', '8', '1345202921', '6', '3', 'Thad0ct0r', '0.0']
+length is 14
+
+For length > 13, the rest of them is store in undefined columns.
+For length < 13, we omit the whole entry. (There are only 1 of them)
+
+
+
+There are 38064 distinct words in title.
+
+
+How many users/submissions are there? 
+Since there are 132307 valid data entries, there are 132307 submissions.
+
+
+
+users.most_common: (only few has 2, others all 1 submissions)
+{'10hrul': 2, 'zfvoi': 2, '10rh3e': 2, 'pkcap': 2, '128ocg': 2, 'za2bm': 2, 'zo7fj': 2, 'yhmup': 2, 'zancp': 2, 'zu02c': 2, '11xbwm': 2, '11d8xm': 2, 'v8u8x': 2, 'lqoxj': 2, 'zkhmr': 2, '11vift': 2, '13568s': 2, '10qva8': 2, 't8fc7': 2, '12b2lv': 2, 'zl1e0': 2, 'z7xy7': 2, '10q6l9': 2, '11yhep': 2, 'ytbsv': 2, '1275v7': 2, 'ykkdd': 2, 'npjk4': 2, '10h8zi': 2, 'zrrz4': 2, 'zh3yq': 2, 'z4vhp': 2, 'uj4hv': 2, 'y70s9': 2, 'wje3g': 2, '10wluk': 2, '11y2m6': 2, 'zj73v': 2, 'y17xg': 2, '10ayqi': 2, '10uqig': 2, 'y5vh8': 2, '10pix3': 2, 'ybmol': 2, 'yxy7b': 2, 'yu1w9': 2, '12sduf': 2, '10p80k': 2, 'guhfy': 2, '13818j': 2, '106yo9': 2, 'yug3s': 2, 'y4mk1': 2, '1227sw': 2, '10pekn': 2, '10pekq': 2, 'zeip3': 2, 'zqyda': 2, 'q2ahd': 2, '11hq3u': 2, 'z8kga': 2, 'zvi8u': 2, 'y4ebz': 2, 'yr43f': 2, '10drmk': 2, 'yvk3t': 2, '12aeyf': 2, 'yblys': 2, '11ydk4': 2, '10i6ti': 2, '11w2uj': 2, '10orto': 2, '11tz2o': 2, '11abvy': 2, '13cyw7': 2, '13a7he': 2, 'ynvq7': 2, 'z59z1': 2, '1103nc': 2, 'yv0ot': 2, '100ldp': 2, 'z9qo1': 2, 'zv6v6': 2, 'zg0sq': 2, '12dk51': 2, 'jfnxc': 2, 'mwecj': 2, '12nhh8': 2, '10aqhy': 2, 'z2ej9': 2, 'wgoi6': 2, 'y0rbr': 2, 'z98rk': 2, 'sujpk': 1, 'x2y70': 1, '1140hm': 1, 'zgk4o': 1, '14phew': 1, 'm1nol': 1, '12nl5s': 1, 'qryvz': 1, 'vo3mz': 1, 'zcczj': 1, '10mx67': 1, 'rkt3y': 1, 'u0rhn': 1, 'se9sl': 1, 'qxwqk': 1, 'yi06c': 1, 'l4rgi': 1, '1140hw': 1, 'zd51u': 1, 'wv5bv': 1, 'u2ju1': 1, 'slwev': 1, '10ljme': 1, '10zvju': 1, '128wz9': 1, 'yulco': 1, ..}
+
+
+Counter({-8: 4175, -7: 87377, 0: 40755})
+
+
+raw time is local time, and something like x-07:00 is the UTC time
