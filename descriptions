@@ -49,4 +49,4 @@ users.most_common: (only few has 2, others all 1 submissions)
 Counter({-8: 4175, -7: 87377, 0: 40755})
 
 
-raw time is local time, and something like x-07:00 is the UTC time
+rawtime is in the format of xxxx-07:00. The result of xxxx-07:00 is UTC time and unixtime. xxxx is local time.
